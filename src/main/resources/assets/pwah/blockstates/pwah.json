@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,filled=false": {
+      "model": "pwah:block/pwah",
+      "y": 90
+    },
+    "facing=north,filled=false": {
+      "model": "pwah:block/pwah"
+    },
+    "facing=south,filled=false": {
+      "model": "pwah:block/pwah",
+      "y": 180
+    },
+    "facing=west,filled=false": {
+      "model": "pwah:block/pwah",
+      "y": 270
+    },
+    "facing=east,filled=true": {
+      "model": "pwah:block/pwafh",
+      "y": 90
+    },
+    "facing=north,filled=true": {
+      "model": "pwah:block/pwafh"
+    },
+    "facing=south,filled=true": {
+      "model": "pwah:block/pwafh",
+      "y": 180
+    },
+    "facing=west,filled=true": {
+      "model": "pwah:block/pwafh",
+      "y": 270
+    }
+  }
+}

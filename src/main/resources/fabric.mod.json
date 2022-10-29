@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pwah",
+  "version": "${version}",
+  "name": "Pumpkin With A Hole",
+  "description": "Just a pumpkin with a hole, not much else to see...",
+  "authors": [
+    "Franckyi"
+  ],
+  "contact": {
+    "website": "https://github.com/Franckyi/pwah",
+    "repo": "https://github.com/Franckyi/pwah"
+  },
+  "license": "MIT",
+  "icon": "assets/pwah/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.franckyi.pwah.client.PwahClient"
+    ],
+    "main": [
+      "dev.franckyi.pwah.Pwah"
+    ]
+  },
+  "mixins": [
+    "pwah.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": "*",
+    "minecraft": "~1.19"
+  }
+}
