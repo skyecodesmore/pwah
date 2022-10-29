@@ -1,4 +1,4 @@
-package dev.franckyi.pwah.mixin;
+package dev.franckyi.pwah.fabric.mixin;
 
 import dev.franckyi.pwah.Pwah;
 import net.minecraft.item.BoneMealItem;
