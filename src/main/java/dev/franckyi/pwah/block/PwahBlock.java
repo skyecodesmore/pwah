@@ -54,7 +54,7 @@ public class PwahBlock extends HorizontalFacingBlock implements Fertilizable {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(Items.BUCKET) && state.get(FILLED)) {
+        if (itemStack.isOf(Items.BUCKET) && state.get(FILLED) && hit.getSide().equals(state.get(FACING))) {
             ItemStack stack = Items.MILK_BUCKET.getDefaultStack();
             NbtList desc = new NbtList();
             desc.add(NbtString.of(""));

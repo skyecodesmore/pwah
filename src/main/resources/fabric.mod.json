@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "id": "pwah",
   "version": "${version}",
-  "name": "Pumpkin With A Hole",
-  "description": "Just a pumpkin with a hole, not much else to see...",
+  "name": "Pumpkin with a Hole",
+  "description": "Just a pumpkin with a hole in it, nothing else to see...",
   "authors": [
     "Franckyi"
   ],
   "contact": {
-    "website": "https://github.com/Franckyi/pwah",
-    "repo": "https://github.com/Franckyi/pwah"
+    "homepage": "https://github.com/Franckyi/pwah",
+    "sources": "https://github.com/Franckyi/pwah",
+    "issues": "https://github.com/Franckyi/pwah/issues"
   },
   "license": "MIT",
-  "icon": "assets/pwah/icon.png",
+  "icon": "assets/pwah/textures/block/pwah.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "dev.franckyi.pwah.client.PwahClient"
-    ],
     "main": [
       "dev.franckyi.pwah.Pwah"
     ]
