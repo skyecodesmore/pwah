@@ -28,6 +28,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 
 public class PwahBlock extends HorizontalFacingBlock implements Fertilizable {
     public static final IntProperty BREEDING = IntProperty.of("breeding", 0, 7);
@@ -43,7 +44,7 @@ public class PwahBlock extends HorizontalFacingBlock implements Fertilizable {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -71,7 +72,7 @@ public class PwahBlock extends HorizontalFacingBlock implements Fertilizable {
     }
 
     @Override
-    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
+    public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
         return !state.get(FILLED);
     }
 
