@@ -26,9 +26,8 @@ public class Pwah {
     public static final Item PWAH_ITEM = new BlockItem(PWAH_BLOCK, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(PWAH_ITEM_KEY));
 
     public static void onClientTick(MinecraftClient client) {
-        if (!client.isIntegratedServerRunning() || client.isPaused())
+        if (!client.isIntegratedServerRunning() || client.isPaused() || client.player == null)
             return;
-        assert client.player != null;
         tryBreed(Objects.requireNonNull(client.getServer()).getPlayerManager().getPlayer(client.player.getUuid()));
     }
 
@@ -49,7 +48,7 @@ public class Pwah {
         }
         if (!player.getCommandTags().contains("isSneaking")) {
             player.getCommandTags().add("isSneaking");
-            World world = player.getWorld();
+            World world = player.getEntityWorld();
             BlockPos playerPos = player.getBlockPos();
             Direction playerFacing = player.getHorizontalFacing();
             BlockPos blockPos = playerPos.offset(playerFacing);
