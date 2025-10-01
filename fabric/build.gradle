@@ -33,17 +33,17 @@ processResources {
 
 shadowJar {
     configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
+    archiveClassifier = "fabric-dev-shadow"
 }
 
 remapJar {
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier = null
+    archiveClassifier = "fabric"
 }
 
 jar {
-    archiveClassifier = "dev"
+    archiveClassifier = "fabric-dev"
 }
 
 components.java {
