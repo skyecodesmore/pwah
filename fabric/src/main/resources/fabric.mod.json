@@ -5,12 +5,12 @@
   "name": "Pumpkin with a Hole",
   "description": "Just a pumpkin with a hole in it, nothing else to see...",
   "authors": [
-    "Franckyi"
+    "skyecodes"
   ],
   "contact": {
-    "homepage": "https://github.com/Franckyi/pwah",
-    "sources": "https://github.com/Franckyi/pwah",
-    "issues": "https://github.com/Franckyi/pwah/issues"
+    "homepage": "https://github.com/skyecodesmore/pwah",
+    "sources": "https://github.com/skyecodesmore/pwah",
+    "issues": "https://github.com/skyecodesmore/pwah/issues"
   },
   "license": "MIT",
   "icon": "assets/pwah/textures/block/pwah.png",
@@ -27,6 +27,6 @@
   "depends": {
     "fabricloader": ">=0.14",
     "fabric": "*",
-    "minecraft": "~1.19"
+    "minecraft": ">=1.20"
   }
 }

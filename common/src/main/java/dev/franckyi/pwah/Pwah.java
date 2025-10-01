@@ -19,7 +19,7 @@ public class Pwah {
     public static final String MOD_ID = "pwah";
     public static final Identifier PWAH_BLOCK_ID = new Identifier(MOD_ID, "pwah");
     public static final Block PWAH_BLOCK = new PwahBlock(AbstractBlock.Settings.copy(Blocks.CARVED_PUMPKIN));
-    public static final Item PWAH_ITEM = new BlockItem(PWAH_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Item PWAH_ITEM = new BlockItem(PWAH_BLOCK, new Item.Settings());
 
     public static void onClientTick(MinecraftClient client) {
         if (!client.isIntegratedServerRunning() || client.isPaused())
@@ -43,9 +43,9 @@ public class Pwah {
             player.removeScoreboardTag("isSneaking");
             return;
         }
-        if (!player.getScoreboardTags().contains("isSneaking")) {
-            player.addScoreboardTag("isSneaking");
-            World world = player.world;
+        if (!player.getCommandTags().contains("isSneaking")) {
+            player.getCommandTags().add("isSneaking");
+            World world = player.getWorld();
             BlockPos playerPos = player.getBlockPos();
             Direction playerFacing = player.getHorizontalFacing();
             BlockPos blockPos = playerPos.offset(playerFacing);
