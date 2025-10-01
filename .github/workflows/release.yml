@@ -34,7 +34,8 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version_tag }}
           files: |
-            build/libs/*.jar
+            fabric/build/libs/*.jar
+            forge/build/libs/*.jar
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}

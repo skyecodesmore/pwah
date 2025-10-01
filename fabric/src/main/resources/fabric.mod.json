@@ -17,11 +17,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.franckyi.pwah.Pwah"
+      "dev.franckyi.pwah.fabric.PwahFabric"
     ]
   },
   "mixins": [
-    "pwah.mixins.json"
+    "pwah.mixins.json",
+    "pwah-common.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14",
