@@ -18,10 +18,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v2
         with:
-          java-version: 17
+          java-version: 21
           distribution: 'adopt'
 
       - name: Build mod
@@ -35,7 +35,7 @@ jobs:
           tag_name: ${{ github.event.inputs.version_tag }}
           files: |
             fabric/build/libs/*.jar
-            forge/build/libs/*.jar
+            neoforge/build/libs/*.jar
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.franckyi.pwah.fabric.PwahFabric"
+      "com.skyecodes.pwah.fabric.PwahFabric"
     ]
   },
   "mixins": [
